@@ -1,5 +1,4 @@
 .env
-data/*.db
 data/*.xlsx
 data/resume.pdf
 logs/*.log
