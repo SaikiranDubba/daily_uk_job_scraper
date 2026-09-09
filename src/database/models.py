@@ -4,7 +4,7 @@ Database models for the job pipeline.
 SQLite is the source of truth; Excel (later phase) is generated FROM this,
 not the other way round.
 """
-
+import os
 from sqlalchemy import Column, Integer, String, Text, create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
@@ -36,6 +36,9 @@ class JobRecord(Base):
 
 
 def get_engine(db_path: str = "data/jobs.db"):
+    folder = os.path.dirname(db_path)
+    if folder:
+        os.makedirs(folder, exist_ok=True)
     return create_engine(f"sqlite:///{db_path}")
 
 
