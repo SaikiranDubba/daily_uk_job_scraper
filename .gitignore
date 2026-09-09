@@ -1,0 +1,9 @@
+.env
+data/*.db
+data/*.xlsx
+data/resume.pdf
+logs/*.log
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/

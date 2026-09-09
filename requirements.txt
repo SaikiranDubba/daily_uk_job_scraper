@@ -1,0 +1,7 @@
+httpx
+pydantic
+python-dotenv
+sqlalchemy
+pytest
+respx
+
